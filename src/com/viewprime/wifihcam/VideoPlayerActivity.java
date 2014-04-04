@@ -226,6 +226,7 @@ public class VideoPlayerActivity extends Activity implements IVideoPlayer {
     private ImageButton mTakeSnapShot;
     private ImageButton mRecord;
 
+    private  String mrtspurl = "rtsp://192.168.4.102:8086";
     @Override
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     protected void onCreate(Bundle savedInstanceState) {
@@ -1818,7 +1819,7 @@ public class VideoPlayerActivity extends Activity implements IVideoPlayer {
 
         mSurface.setKeepScreenOn(true);
         
-		mLocation = "http://10.10.10.254:8080";
+		mLocation = mrtspurl;
 		//mLocation = "rtsp://172.17.2.1";
 		mLibVLC.playMRL(mLocation);
 
